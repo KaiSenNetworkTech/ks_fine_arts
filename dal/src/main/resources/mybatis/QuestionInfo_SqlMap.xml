@@ -23,13 +23,13 @@
 
 	<sql id="QueryCondition">
 		<trim prefix="WHERE" prefixOverrides="AND |OR ">
-			<if test="id != null && queryType == 'equal' ">
+			<if test="id != null and queryType == 'equal' ">
 				id=#{id}
 			</if>
-			<if test="id != null && queryType == 'larger' ">
+			<if test="id != null and queryType == 'larger' ">
 				<![CDATA[ id>#{id} ]]>
 			</if>
-			<if test="id != null && queryType == 'lesser' ">
+			<if test="id != null and queryType == 'lesser' ">
 				<![CDATA[ id<#{id} ]]>
 			</if>
 			<if test="questionType != null">
@@ -38,8 +38,8 @@
 			<if test="questionStatus != null">
 				AND question_status=#{questionStatus}
 			</if>
-			<if test="gmtCreate != null">
-				AND gmt_create>#{questionStatus}
+			<if test="questionerID != null">
+				AND questioner_id>#{questionerID}
 			</if>
 		</trim>
 	</sql>
