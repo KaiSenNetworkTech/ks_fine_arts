@@ -2,6 +2,8 @@ package com.kaisen.finearts.domain;
 
 import java.util.Date;
 
+import com.sun.tools.javac.util.List;
+
 public class QuestionInfoDO extends BaseDO {
 	private static final long serialVersionUID = -6430521212698313660L;
 
@@ -14,6 +16,15 @@ public class QuestionInfoDO extends BaseDO {
 	private Integer questionStatus;
 	private Long lastAnswerID;
 	private Date lastAnswerTtime;
+	private List<AnswerInfoDO> answerInfos;
+
+	public List<AnswerInfoDO> getAnswerInfos() {
+		return answerInfos;
+	}
+
+	public void setAnswerInfos(List<AnswerInfoDO> answerInfos) {
+		this.answerInfos = answerInfos;
+	}
 
 	public Long getQuestionerID() {
 		return questionerID;
