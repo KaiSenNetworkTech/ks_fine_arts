@@ -6,10 +6,8 @@
 		<setting name="mapUnderscoreToCamelCase" value="true" />
 	</settings>
 	<typeAliases>
-		<typeAlias alias="UserInfoDO" type="com.kaisen.usercenter.domain.UserInfoDO" />
-		<typeAlias alias="UserInfoQuery" type="com.kaisen.usercenter.query.UserInfoQuery" />
-
-
+		<typeAlias alias="QuestionInfoDO" type="com.kaisen.finearts.domain.QuestionInfoDO" />
+		<typeAlias alias="QuestionInfoQuery" type="com.kaisen.finearts.query.QuestionInfoQuery" />
 	</typeAliases>
 
 	<plugins>

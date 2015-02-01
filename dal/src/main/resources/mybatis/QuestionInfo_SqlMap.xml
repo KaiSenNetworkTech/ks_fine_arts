@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.kaisen.usercenter.dao.UserInfoDAO">
+<mapper namespace="com.kaisen.finearts.dao.QuestionInfoDAO">
 
-	<sql id="UserInfoTable">
-		tbl_user_info
+	<sql id="QuestionInfoTable">
+		tbl_question_info
 	</sql>
 
-	<sql id="UserInfoField">
-		id,
-		user_name,
-		mobile_phone_no,
-		password,
-		avatars_url,
-		status,
-		date_of_birth,
-		sex,
-		region_code,
-		gmt_create,
-		gmt_modify
+	<sql id="QuestionInfoField">
 	</sql>
 
 	<sql id="QueryCondition">
@@ -44,10 +33,10 @@
 		ORDER BY id DESC
 	</sql>
 
-	<insert id="insertUserInfo" parameterType="UserInfoDO"
+	<insert id="insert" parameterType="QuestionInfoDO"
 		useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO
-		<include refid="UserInfoTable" />
+		<include refid="QuestionInfoTable" />
 		(
 		user_name,
 		mobile_phone_no,
@@ -66,9 +55,9 @@
 		)
 	</insert>
 
-	<update id="updateUserInfo" parameterType="UserInfoDO">
+	<update id="update" parameterType="QuestionInfoDO">
 		UPDATE
-		<include refid="UserInfoTable" />
+		<include refid="QuestionInfoTable" />
 		<trim prefix="SET" suffixOverrides=",">
 			<if test="userName != null">
 				user_name=#{userName},
@@ -98,19 +87,19 @@
 		WHERE id=#{id}
 	</update>
 
-	<select id="queryUserInfo" parameterType="UserInfoQuery"
-		resultType="UserInfoDO">
+	<select id="query" parameterType="QuestionInfoQuery"
+		resultType="QuestionInfoDO">
 		SELECT
-		<include refid="UserInfoField" />
+		<include refid="QuestionInfoField" />
 		FROM
-		<include refid="UserInfoTable" />
+		<include refid="QuestionInfoTable" />
 		<include refid="QueryCondition" />
 		<include refid="OrderCondition" />
 	</select>
 
-	<delete id="deleteUserInfo" parameterType="UserInfoDO">
+	<delete id="delete" parameterType="QuestionInfoDO">
 		DELETE FROM
-		<include refid="UserInfoTable" />
+		<include refid="QuestionInfoTable" />
 		WHERE
 		id=#{id}
 	</delete>
