@@ -8,6 +8,9 @@
 	<typeAliases>
 		<typeAlias alias="QuestionInfoDO" type="com.kaisen.finearts.domain.QuestionInfoDO" />
 		<typeAlias alias="QuestionInfoQuery" type="com.kaisen.finearts.query.QuestionInfoQuery" />
+		
+		<typeAlias alias="AnswerInfoDO" type="com.kaisen.finearts.domain.AnswerInfoDO" />
+		<typeAlias alias="AnswerInfoQuery" type="com.kaisen.finearts.query.AnswerInfoQuery" />
 	</typeAliases>
 
 	<plugins>

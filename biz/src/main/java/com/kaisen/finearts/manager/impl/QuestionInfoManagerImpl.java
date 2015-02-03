@@ -27,7 +27,7 @@ public class QuestionInfoManagerImpl implements IQuestionInfoManager {
 	public void insert(QuestionInfoDO questionInfoDO) {
 		logger.debug("插入问题{}", questionInfoDO);
 		Integer num = questionInfoDAO.insert(questionInfoDO);
-		logger.debug("插入问题成功,共{}条", num);
+		logger.debug("插入问题成功,id={}", num);
 	}
 
 	@Override
