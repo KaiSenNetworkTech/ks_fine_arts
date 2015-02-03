@@ -3,16 +3,27 @@ package com.kaisen.finearts.service;
 import java.util.List;
 
 import com.kaisen.common.result.CallServiceResult;
+import com.kaisen.finearts.domain.AnswerInfoDO;
 import com.kaisen.finearts.domain.QuestionInfoDO;
+import com.kaisen.finearts.query.AnswerInfoQuery;
 import com.kaisen.finearts.query.QuestionInfoQuery;
 
 public interface IQuestionService {
-	CallServiceResult<Void> insert(QuestionInfoDO questionInfoDO);
+	CallServiceResult<Void> askQuestion(QuestionInfoDO questionInfoDO);
 
-	CallServiceResult<Void> update(QuestionInfoDO questionInfoDO);
+	CallServiceResult<Void> updateQuestion(QuestionInfoDO questionInfoDO);
 
-	CallServiceResult<List<QuestionInfoDO>> query(
+	CallServiceResult<List<QuestionInfoDO>> queryQuestion(
 			QuestionInfoQuery questionInfoQuery);
 
-	CallServiceResult<Void> delete(QuestionInfoDO questionInfoDO);
+	CallServiceResult<Void> deleteQuestion(QuestionInfoDO questionInfoDO);
+
+	CallServiceResult<Void> answerQuestion(AnswerInfoDO answerInfoDO);
+
+	CallServiceResult<Void> updateAnswer(AnswerInfoDO answerInfoDO);
+
+	CallServiceResult<List<AnswerInfoDO>> queryAnswer(
+			AnswerInfoQuery answerInfoQuery);
+
+	CallServiceResult<Void> deleteAnswer(AnswerInfoDO answerInfoDO);
 }

@@ -14,6 +14,11 @@ public class QuestionInfoDO extends BaseDO {
 	private Long voiceTime;
 	private Integer questionType;
 	private Integer questionStatus;
+
+	public static final Integer STATUS_FROZEN = Integer.valueOf(-1);
+	public static final Integer STATUS_NO_ANSWER = Integer.valueOf(0);
+	public static final Integer STATUS_HAS_BEEN_ANSWERED = Integer.valueOf(1);
+
 	private Long lastAnswerID;
 	private Date lastAnswerTtime;
 	private List<AnswerInfoDO> answerInfos;
